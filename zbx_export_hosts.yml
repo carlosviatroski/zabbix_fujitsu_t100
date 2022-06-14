@@ -14,7 +14,7 @@ zabbix_export:
           name: 'Fujitsu 1Finity T100 LLV'
       groups:
         -
-          name: PR-CTA-A
+          name: TESTE
       interfaces:
         -
           interface_ref: if1
