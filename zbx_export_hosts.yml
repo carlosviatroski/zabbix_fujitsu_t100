@@ -1,0 +1,36 @@
+zabbix_export:
+  version: '6.0'
+  date: '2022-06-14T16:57:00Z'
+  groups:
+    -
+      uuid: 7e50f50dc36a4dd9a1b02e0420b19a04
+      name: TESTE
+  hosts:
+    -
+      host: FUJITSU_TESTE
+      name: FUJITSU_TESTE
+      templates:
+        -
+          name: 'Fujitsu 1Finity T100 LLV'
+      groups:
+        -
+          name: PR-CTA-A
+      interfaces:
+        -
+          interface_ref: if1
+        -
+          type: SNMP
+          ip: '{$IP}'
+          port: '161'
+          details:
+            community: '{$SNMP_COMMUNITY}'
+            bulk: 'NO'
+          interface_ref: if2
+      macros:
+        -
+          macro: '{$IP}'
+          value: 192.168.0.1
+        -
+          macro: '{$SNMP_COMMUNITY}'
+          value: teste@teste
+      inventory_mode: DISABLED
